@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+body {
+  background-image: url(../assets/minecraft-background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+header {
+  display:flex;
+  flex-direction:row;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 20%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 60%, rgba(255,255,255,0) 80%);
+  height:5vh;
+  justify-content: center;
+}
+header img {
+  height:80%;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+#skyronman-header-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-left: 1rem;
+  font-family: 'Kanit', sans-serif;
+  height:100%;
+}
+#input-div {
+  margin:22.5vh 30vw;
+  justify-content: center;
+  height:50vh;
+  width:40vw;
+  background-color:rgba(56, 56, 56, 0.878);
+  display:grid;
+  border-radius:50px;
+}
+.grid-items {
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+#input-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-left: 1rem;
+  font-family: 'Kanit', sans-serif;
+}
+#input {
+  text-align:center;
+  width:100%;
+  font-size: 3rem;
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  background-color:rgba(94, 94, 94, 0.258);
+  border:none;
+  cursor:text;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+#searchButton {
+  cursor:pointer;
+  width:40%;
+  height:50%;
+  border-radius:25px;
+  background-color:rgba(22, 22, 22, 0.489);
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,1);
+  color:white;
+  font-family: 'Kanit', sans-serif;
+  font-size:1.5rem;
+}
+#searchButton:active {
+  background-color:rgba(22, 22, 22, 0.589);
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,1);
+  scale:0.99;
+}
