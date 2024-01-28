@@ -67,6 +67,23 @@ header img {
 input:focus::placeholder {
   color: transparent;
 }
+#no-ironman-profile {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-left: 1rem;
+  font-family: 'Kanit', sans-serif;
+  height:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  color:red;
+}
+.no-ironman-profile {
+  display:none;
+}
 #searchButton {
   cursor:pointer;
   width:40%;
