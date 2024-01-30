@@ -24,7 +24,7 @@ async function searchForPlayer() {
   const playerUUID = await fetchData(mojangURL);
   console.log(playerUUID.uuid)
   
-  let playerInfo = await fetchData("https://api.hypixel.net/v2/skyblock/profiles?uuid=" + playerUUID.uuid + "&key=2d65dd58-a376-4852-bbdb-5957d2d0d1c6");
+  let playerInfo = await fetchData("https://api.hypixel.net/v2/skyblock/profiles?uuid=" + playerUUID.uuid + "&key=039251b4-b720-41a3-a127-1fa11a101c43");
   playerInfo = playerInfo.profiles;
   let ironmanProfiles = [];
   for(let i = 0;i<playerInfo.length; i++) {
@@ -33,11 +33,16 @@ async function searchForPlayer() {
     }
   }
   if(ironmanProfiles.length == 0) {
+    console.log(window.getComputedStyle(document.querySelector(".grid-items")).getPropertyValue("height"));
+    document.querySelector("#input-div").style.height = parseInt(window.getComputedStyle(document.querySelector("#input-div")).getPropertyValue("height").replace("px")) * 1.34 + "px";
     document.querySelector("#no-ironman-profile").innerHTML = "No Ironman Profiles Found For " + playerName;
     document.querySelector(".no-ironman-profile").style.display = "block";
     setTimeout(() => {
+      document.querySelector("#input-div").style.height = parseInt(window.getComputedStyle(document.querySelector("#input-div")).getPropertyValue("height").replace("px")) / 1.34 + "px";
       document.querySelector(".no-ironman-profile").style.display = "none";
     }, 3000);
     return;
+  }else {
+    console.log(ironmanProfiles);
   }
 }
